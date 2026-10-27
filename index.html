@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday, My Love 💌</title>
+  <meta name="description" content="A little piece of my heart, turned into a website." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- =========================================================
+       ✏️ EDIT ME: Search this file for [ and ] brackets —
+       every [PLACEHOLDER] is something you can personalise.
+       ========================================================= -->
+
+  <!-- 1. OPENING SCREEN -->
+  <div id="intro" class="intro" role="dialog" aria-label="Birthday surprise">
+    <div class="hearts-layer" aria-hidden="true"></div>
+    <div class="intro-content">
+      <p class="intro-kicker">for my favourite person</p>
+      <h1 class="intro-title">Hey, <span class="name">[His Nickname]</span>…</h1>
+      <p class="intro-sub">I made you something. It holds a little piece of my heart.</p>
+      <button id="openBtn" class="btn btn-primary">Open Your Birthday Surprise 💝</button>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <a href="#home" class="logo">♡ <span class="name">[His Name]</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#wishes">Wishes</a>
+      <a href="#envelopes">Open When</a>
+      <a href="#reasons">Reasons</a>
+      <a href="#gallery">Memories</a>
+      <a href="#letter">Letter</a>
+      <a href="#celebrate">Celebrate</a>
+      <a href="#hug">Hug</a>
+    </nav>
+  </header>
+
+  <button id="musicBtn" class="music-btn" aria-pressed="false" aria-label="Play background music">♪ <span>Play music</span></button>
+  <!-- ✏️ Put your song in this folder and name it "music.mp3" -->
+  <audio id="bgMusic" src="music.mp3" loop preload="none"></audio>
+
+  <main>
+    <!-- 2. HERO -->
+    <section id="home" class="hero">
+      <div class="hearts-layer soft" aria-hidden="true"></div>
+      <p class="hero-date">2083/07/11</p>
+      <h1 class="hero-title">Happy Birthday,<br /><em class="name">[His Name]</em></h1>
+      <p class="hero-sub">To my babee, my maya, my favourite cylinder — you turn ordinary days into the softest chapters of my life.<br />Today the whole world gets to celebrate you, Sagaruu — but I get to love you.</p>
+      <a href="#wishes" class="btn btn-ghost">Begin our little journey ↓</a>
+    </section>
+
+    <!-- 3. WISHES -->
+    <section id="wishes" class="section">
+      <h2 class="section-title">Birthday Wishes, Just for You</h2>
+      <p class="section-sub">Forty little wishes — one for every corner of your heart.</p>
+      <div class="wish-grid" id="wishGrid"></div>
+    </section>
+
+    <!-- 4. ENVELOPES -->
+    <section id="envelopes" class="section tinted">
+      <h2 class="section-title">Open When…</h2>
+      <p class="section-sub">Tap an envelope whenever you need a little reminder of how loved you are.</p>
+      <div class="env-grid" id="envGrid"></div>
+    </section>
+
+    <!-- 5. REASONS -->
+    <section id="reasons" class="section">
+      <h2 class="section-title">Reasons I Love You</h2>
+      <p class="section-sub">Tap each heart to reveal one. (There are far more than these.)</p>
+      <div class="reason-grid" id="reasonGrid"></div>
+      <button class="btn btn-ghost" id="revealAll">Reveal them all</button>
+    </section>
+
+    <!-- 6. GALLERY -->
+    <section id="gallery" class="section tinted">
+      <h2 class="section-title">Our Little Scrapbook</h2>
+      <div class="scrapbook" id="scrapbook"></div>
+    </section>
+
+    <!-- 7. LETTER -->
+    <section id="letter" class="section">
+      <h2 class="section-title">A Letter From My Heart</h2>
+      <article class="letter-paper" id="letterPaper" contenteditable="false">
+        <p class="letter-greet">My dearest <span class="name">[His Nickname]</span>,</p>
+        <p>Happy birthday, my love. I've started this letter a hundred times in my head, and every version ends the same way — with me realising there aren't enough words for what you are to me.</p>
+        <p>Do you remember <span class="ph">[the day we first met / our first conversation]</span>? I didn't know it then, but that was the moment my life quietly split into "before you" and "after you." And "after you" has been the most beautiful part.</p>
+        <p>You are my calm on loud days and my laughter on heavy ones. You've seen the parts of me I usually hide and somehow you loved them gently, like they were worth holding. I don't think you know how rare that is. I don't think you know how safe you make me feel.</p>
+        <p>I love the way you <span class="ph">[a small habit of his you adore]</span>. I love how you <span class="ph">[something he does that makes you feel loved]</span>. And I love that, even on the days when life gets hard, you still choose us.</p>
+        <p>On your birthday I wish you everything — peace in your mind, softness in your days, courage for your dreams, and people who treat your heart the way it deserves. And if you'll let me, I want to be there for all of it. Every birthday. Every ordinary Tuesday. Every chapter.</p>
+        <p>Thank you for being born. Thank you for finding me. Thank you for being you.</p>
+        <p class="letter-sign">Forever yours,<br /><span class="name-me">[Your Name]</span> ♡</p>
+      </article>
+      <div class="letter-actions">
+        <button class="btn btn-ghost" id="editLetter">✎ Edit letter</button>
+        <button class="btn btn-ghost" id="resetLetter">↺ Reset</button>
+      </div>
+    </section>
+
+    <!-- 8. CELEBRATE -->
+    <section id="celebrate" class="section tinted">
+      <h2 class="section-title">Let's Celebrate You</h2>
+      <p class="section-sub">Light the candles, make a wish, and blow them out.</p>
+      <div class="cake" id="cake" aria-label="Birthday cake">
+        <div class="candles" id="candles"></div>
+        <div class="cake-top"></div>
+        <div class="cake-body"></div>
+        <div class="cake-plate"></div>
+      </div>
+      <div class="celebrate-actions">
+        <button class="btn btn-primary" id="blowBtn">🌬️ Blow the candles</button>
+        <button class="btn btn-ghost" id="confettiBtn">🎉 More confetti</button>
+      </div>
+      <form class="wish-form" id="wishForm">
+        <label for="wishInput">Write your birthday wish into the stars:</label>
+        <div class="wish-row">
+          <input id="wishInput" type="text" maxlength="120" placeholder="I wish…" required />
+          <button class="btn btn-primary" type="submit">Send ✨</button>
+        </div>
+      </form>
+      <ul class="star-wishes" id="starWishes" aria-live="polite"></ul>
+    </section>
+
+    <!-- 9. HUG -->
+    <section id="hug" class="section hug-section">
+      <h2 class="section-title">One Last Thing…</h2>
+      <p class="section-sub">A big birthday hug, made just for you.</p>
+      <button class="btn btn-primary big" id="hugBtn">Press for a virtual hug 🤗</button>
+      <div class="hug-stage" id="hugStage" aria-live="polite">
+        <div class="big-heart" aria-hidden="true">❤</div>
+        <p class="hug-text">Consider yourself held — tightly, warmly, for as long as you need.<br />I love you, <span class="name">[His Nickname]</span>. Happy birthday. ♡</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">Made with every bit of my heart, by <span class="name-me">Nistha</span> ·</footer>
+
+  <!-- Modal for envelopes -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <h3 id="modalTitle"></h3>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <canvas id="confetti" aria-hidden="true"></canvas>
+  <input type="file" id="photoInput" accept="image/*" hidden />
+  <script src="script.js"></script>
+</body>
+</html>
